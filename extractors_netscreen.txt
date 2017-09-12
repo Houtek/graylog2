@@ -9,3 +9,8 @@ NETSCREENSESSIONLOG2-NONAT
 
 NETSCREENSESSIONLOG3-ICMP
 %{IPORHOST}: NetScreen device_id=%{WORD:device_id}%{DATA}system-%{WORD:loglevel}-%{DATA}: start_time=%{QUOTEDSTRING:start_time} duration=%{INT:duration} policy_id=%{INT:policy_id} service=%{DATA:service} proto=%{INT:proto} src zone=%{DATA:src_zone} dst zone=%{DATA:dst_zone} action=%{WORD:action} sent=%{INT:sent} rcvd=%{INT:rcvd} src=%{IP:src_ip} dst=%{IP:dst_ip} icmp type=%{INT:icmp_type} icmp code=%{INT:icmp_code} src-xlated ip=%{IP:src_xlated_ip} dst-xlated ip=%{IP:dst_xlated_ip} session_id=%{INT:session_id} reason=%{GREEDYDATA:reason} 
+
+
+NETSCREENSESSIONLOG3-ICMP-NONAT
+
+start_time=%{QUOTEDSTRING:start_time} duration=%{INT:duration} policy_id=%{INT:policy_id} service=%{DATA:service} proto=%{INT:proto} src zone=%{DATA:src_zone} dst zone=%{DATA:dst_zone} action=%{WORD:action} sent=%{INT:sent} rcvd=%{INT:rcvd} src=%{IP:src_ip} dst=%{IP:dst_ip} icmp type=%{INT:icmp_type} icmp code=%{INT:icmp_code} session_id=%{INT:session_id} reason=%{GREEDYDATA:reason}
